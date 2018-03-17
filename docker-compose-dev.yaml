@@ -1,0 +1,20 @@
+version: '2'
+services:
+  jenkins:
+    build:
+      context: ./jenkins
+      dockerfile: Dockerfile-alpine
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - /var/jenkins_home:/var/jenkins_home
+  
+  sonar:
+    build:
+      context: ./sonar
+      dockerfile: Dockerfile
+    ports:
+      - "9000:9000"
+    volumes:
+      - /opt/sonarqube/data:/opt/sonarqube/data
