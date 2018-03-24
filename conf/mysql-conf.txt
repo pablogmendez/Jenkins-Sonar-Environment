@@ -1,0 +1,1 @@
+Editar /etc/mysql/mysql.conf.d/mysqld.cnf agregando al final la siguiente sentencia: sql_mode=""
